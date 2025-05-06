@@ -18,7 +18,7 @@ func main() {
 	ctx := context.Background()
 
 	// Configure OTLP log exporter
-	exporter, err := otlploghttp.New(ctx)
+	exporter, err := otlploghttp.New(ctx, otlploghttp.WithEndpointURL("http://localhost:4318/v1/logs"))
 	if err != nil {
 		logs.Fatalf("Failed to initialize OTLP log exporter: %v", err)
 	}
