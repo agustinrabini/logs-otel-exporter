@@ -12,8 +12,9 @@ import (
 	sdklog "go.opentelemetry.io/otel/sdk/log"
 )
 
-//docker build -t otel-collector . && docker run -p 4317:4317 -p 4318:4318 otel-collector
-
+// docker build -t otel-collector . && docker run -p 4317:4317 -p 4318:4318 otel-collector
+// docker stop $(docker ps -a -q)
+// docker rm $(docker ps -a -q)
 func main() {
 	ctx := context.Background()
 
